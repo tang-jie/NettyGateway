@@ -12,9 +12,9 @@
 ----------
 
 ## NettyGateway代理转发场景描述
-* NettyGateway部署在10.1.1.76主机，URL中的路径fcgi-bin/BSSP_SFC。
-* 如果请求报文中出现HelloWorldNettyGateway关键字的时候，转发到http://10.46.158.20:8089/fcgi-bin/BSSP_SFC。
-* 否则转发到http://10.46.158.10:8089/fcgi-bin/BSSP_SFC。
+* NettyGateway部署在10.1.1.76主机，URL中的路径fcgi-bin/BSSP_SFC
+* 如果请求报文中出现HelloWorldNettyGateway关键字的时候，转发到http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
+* 否则转发到http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 
 ----------
 
@@ -34,7 +34,7 @@ netty-gateway.config2.defaultAddr=http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 #配置说明参考：
 #netty-gateway.config3.serverPath ==> URL路径关键字。
 #netty-gateway.config3.keyWord ==> 请求报文匹配关键字。支持1~N个关键字，多个关键字用逗号分割，关键字之间是逻辑与的关系。
-#netty-gateway.config3.matchAddr ==> 请求报文匹配关键字匹配成功时，转发的ULR地址。
+#netty-gateway.config3.matchAddr ==> 请求报文关键字匹配成功时，转发的ULR地址。
 netty-gateway.config3.serverPath=fcgi-bin/BSSP_SFC
 netty-gateway.config3.keyWord=HelloWorldNettyGateway
 netty-gateway.config3.matchAddr=http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
@@ -42,10 +42,10 @@ netty-gateway.config3.matchAddr=http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
 ~~~~~~~~~~
 
 ## NettyGateway代理转发测试
-* 启动NettyGateway服务器，控制台打印如下信息。
+* 启动NettyGateway服务器，控制台打印如下信息
 ![](https://github.com/tang-jie/NettyGateway/blob/master/docs/netty-gateway-1.jpg)
-* 发送HelloWorldNettyGateway到NettyGateway，关键字匹配成功，路由到http://10.46.158.20:8089/fcgi-bin/BSSP_SFC，如下图所示。
+* 发送HelloWorldNettyGateway到NettyGateway，关键字匹配成功，路由到http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
 ![](https://github.com/tang-jie/NettyGateway/blob/master/docs/netty-gateway-3.jpg)
-* 发送Tangjie到NettyGateway，关键字匹配不成功，路由到默认的http://10.46.158.10:8089/fcgi-bin/BSSP_SFC，如下图所示。
+* 发送Tangjie到NettyGateway，关键字匹配不成功，路由到默认的http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 ![](https://github.com/tang-jie/NettyGateway/blob/master/docs/netty-gateway-2.jpg)
 
