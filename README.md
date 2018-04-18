@@ -19,7 +19,7 @@
 ----------
 
 ## NettyGateway代理转发场景配置说明
-* 配置文件netty-gateway.properties新增如下属性：
+* 配置文件[netty-gateway.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.properties)新增如下属性：
 ~~~~~~~~~~java
 #配置说明参考：
 #netty-gateway.config2.serverPath ==> URL路径关键字。
@@ -29,7 +29,7 @@ netty-gateway.config2.defaultAddr=http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 #注意config中的数字顺序递增即可。
 ~~~~~~~~~~
 
-* 配置文件netty-route.properties新增如下属性：
+* 配置文件[netty-route.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-route.properties)新增如下属性：
 ~~~~~~~~~~java
 #配置说明参考：
 #netty-gateway.config3.serverPath ==> URL路径关键字。
@@ -38,7 +38,7 @@ netty-gateway.config2.defaultAddr=http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 netty-gateway.config3.serverPath=fcgi-bin/BSSP_SFC
 netty-gateway.config3.keyWord=HelloWorldNettyGateway
 netty-gateway.config3.matchAddr=http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
-注意config中的数字顺序递增即可。
+#注意config中的数字顺序递增即可。
 ~~~~~~~~~~
 
 ## NettyGateway代理转发测试
