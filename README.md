@@ -6,13 +6,13 @@
 
 ## NettyGateway配置说明
 * NettyGateway默认启动端口8999，你可以通过[netty-gateway.xml](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.xml)的gatewayPort属性进行配置。
-* 配置文件[netty-gateway.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.properties)主要用来定义Http post请求中url的路径（path）部分，没有匹配成功的时候，默认转发的URL地址。
-* 配置文件[netty-route.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-route.properties)主要用来定义具体的url路径（path）跟关键字匹配成功的时候，转发的URL地址。
+* 配置文件[netty-gateway.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.properties)，主要用来定义http post请求中url的路径（path）部分serverPath，以及当请求报文关键字没有匹配成功的时候，默认转发的URL地址defaultAddr。
+* 配置文件[netty-route.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-route.properties)，主要用来定义http post请求中url的路径（path）部分serverPath（路径部分定义必须在netty-gateway.properties中定义过），以及当请求报文关键字keyWord匹配成功的时候，路由转发的URL地址matchAddr。
 
 ----------
 
 ## NettyGateway代理转发场景描述
-* NettyGateway部署在10.1.1.76主机，URL中的路径fcgi-bin/BSSP_SFC
+* NettyGateway部署在10.1.1.76主机，URL中的路径为：fcgi-bin/BSSP_SFC
 * 如果请求报文中出现HelloWorldNettyGateway关键字的时候，转发到http://10.46.158.20:8089/fcgi-bin/BSSP_SFC
 * 否则转发到http://10.46.158.10:8089/fcgi-bin/BSSP_SFC
 
