@@ -4,6 +4,11 @@
 
 ----------
 
+## 如何用Netty实现一个轻量级的HTTP代理服务器
+有兴趣的朋友可以点击查看：https://www.cnblogs.com/jietang/p/8926325.html
+
+----------
+
 ## NettyGateway配置说明
 * NettyGateway默认启动端口8999，你可以通过[netty-gateway.xml](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.xml)的gatewayPort属性进行配置。
 * 配置文件[netty-gateway.properties](https://github.com/tang-jie/NettyGateway/blob/master/src/main/resources/netty-gateway.properties)，主要用来定义http post请求中url的路径（path）部分serverPath，以及当请求报文关键字没有匹配成功的时候，默认转发的URL地址defaultAddr。
